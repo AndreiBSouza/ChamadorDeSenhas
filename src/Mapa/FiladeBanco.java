@@ -13,59 +13,39 @@ public class FiladeBanco extends javax.swing.JFrame {
         customInitComponents();
     }
     
-   
-    public void gerarNovaSenha(char tipo) {
-        
+    public void gerarNovaSenha(char tipo) {     
         Senha senha = new Senha(tipo, 1);
-        Integer numero = 0;
+        Integer numero = 0;        
         
-        
-        if (! senhas.isEmpty()) {
-           
+        if (! senhas.isEmpty()) {           
             numero = senhas.get(senhas.size() - 1).getNumero();
-            senha = new Senha(tipo, numero + 1);
-            
-        } 
-        
-   
-        senhas.add(senha);
-        
-        
+            senha = new Senha(tipo, numero + 1);            
+        }           
+        senhas.add(senha);             
         jTextFieldSenha.setText(senha.toString());
     }
  
     public String getSenha(char tipo) {
         Senha senha = null;
-        
-       
+               
         if (! senhas.isEmpty()) {
             for(int i = 0; i < senhas.size(); i++) {
                 senha = senhas.get(i);
-
-             
-                if(senha.getTipo() == tipo) {
-               
+            
+                if(senha.getTipo() == tipo) {               
                     senhas.remove(senha);
                     return senha.toString();
                 }   
-            }
-        
-          
-            senha = senhas.get(0);
-     
-            senhas.remove(senha);
-            
+            }             
+            senha = senhas.get(0);   
+            senhas.remove(senha);         
             return senha.toString();
-        }
-        
+        }      
         return "SEM SENHAS";
     }
     
-    private void customInitComponents() {
-     
-        jLabelCaixa.setText("");
-        
-     
+    private void customInitComponents() {   
+        jLabelCaixa.setText("");          
         setLocationRelativeTo(null);
     }
 
@@ -357,7 +337,6 @@ public class FiladeBanco extends javax.swing.JFrame {
             }
         });
     }
-
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCaixa1;
