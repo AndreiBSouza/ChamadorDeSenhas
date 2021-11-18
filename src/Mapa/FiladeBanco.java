@@ -4,9 +4,7 @@ import java.util.ArrayList;
 
 public class FiladeBanco extends javax.swing.JFrame {
     
-    
-    private final ArrayList<Senha> senhas = new ArrayList<>(); 
-    
+    private final ArrayList<Senha> senhas = new ArrayList<>();    
      
     public FiladeBanco() {
         initComponents();
