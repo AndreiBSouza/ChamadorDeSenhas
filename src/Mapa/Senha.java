@@ -17,8 +17,8 @@ public class Senha {
 
     /**
      * Aqui sobrepomos o método toString,
-     * que apenas nos retorna a senha no formato que
-     * foi pedido no trabalho (P-1, R-2, C-3).
+     * que apenas nos retorna a senha no formato necessário e respeitando as devidas prioridades
+     *(P-1, R-2, C-3).
      */
     @Override
     public String toString() {
